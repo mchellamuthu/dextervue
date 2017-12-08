@@ -1,0 +1,143 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: rgb(245, 245, 243);
+}
+
+body.home {
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(245, 245, 243);
+}
+
+body.addnewclass {
+    background-color: rgb(62, 66, 93);
+}
+
+.navbar-inverse {
+	background-color: rgb(87, 91, 125) !important;
+	border-color: rgb(87, 91, 125) !important;
+}
+
+a, a:hover, a:focus {
+	color: rgb(0, 174, 239);
+	font-weight: 600;
+	text-decoration: none;
+    cursor: pointer;
+}
+
+.navbar-inverse .navbar-nav>li>a,
+.navbar-inverse .navbar-nav>li>a:hover,
+.navbar-inverse .navbar-nav>li>a:focus {
+	color: #fff;
+}
+
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus {
+	background-color: transparent;
+	color: #fff;
+}
+
+.navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+
+
+.navbar-default {
+	background-color: #fff;
+}
+
+.dropdown-menu {
+    padding: 0px;
+}
+
+.dropdown-menu > li > a {
+    padding: 8px 20px;
+}
+
+.dropdown-menu > li:not(:last-child) {
+    border-bottom: 1px solid rgb(218, 218, 218);
+}
+
+.navbar {
+	margin-bottom: 0px;
+	border-radius: 0px;
+}
+
+.btn-primary {
+	user-select: none;
+    cursor: pointer;
+    font-weight: 600;
+    display: inline-block;
+    outline: none;
+    border: 1px solid rgb(0, 174, 239);
+    font-family: ProximaNova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 0.9rem 3.2rem;
+    border-radius: 200px;
+    box-shadow: none;
+    text-align: center;
+    color: white;
+    background-color: rgb(0, 174, 239);
+    font-size: 1.6rem;
+}
+
+.btn-primary:hover {
+	background-color: rgb(51, 190, 242) !important;
+	border-color: rgb(51, 190, 242) !important;
+	user-select: none;
+    cursor: pointer;
+    font-weight: 600;
+    display: inline-block;
+    outline: none;
+    font-family: ProximaNova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 0.9rem 3.2rem;
+    border-radius: 200px;
+    box-shadow: none;
+    text-align: center;
+    color: white !important;
+    font-size: 1.6rem;
+}
+
+.btn-primary:focus {
+	background-color: rgb(26, 182, 241) !important;
+	border-color: rgb(26, 182, 241) !important;
+	outline: none !important;
+	color: white !important;
+}
+
+.btn-group .btn {
+	width: 15rem;
+}
+
+.btn-group .btn:hover {
+	background-color: transparent;
+}
+
+.btn-link {
+  color: rgb(0, 174, 239);
+  font-weight: normal;
+  border-radius: 0;
+}
+
+.btn-link:hover,
+.btn-link:focus {
+  color: rgb(51, 190, 242) !important;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled].focus,
+fieldset[disabled] .btn-primary.focus {
+    background-color: #dedada !important;
+    border-color: #dedada !important;
+    cursor: not-allowed;
+}

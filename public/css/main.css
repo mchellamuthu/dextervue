@@ -1,0 +1,487 @@
+.email-header-content {
+	padding: 0px;
+    border-radius: 0px;
+    text-shadow: rgba(255, 255, 255, 0.5) 0px 1px;
+    font-weight: bold;
+    border: none;
+    background-color: rgb(216, 242, 252);
+    color: rgb(54, 54, 54);
+    text-align: center;
+    padding: 1rem;
+}
+
+.navbar-nav .dropdown > a {
+	outline: none;
+}
+
+.profile-background {
+	background: url(http://www.pptbackgrounds.org/uploads/school-board-powerpoint-templates.jpg) no-repeat center center;
+	/*http://p1.pichost.me/i/66/1910819.jpg*/
+	background-size: cover;
+	height: 22rem;
+	background-color: #060;
+	color: #fff;
+	text-align: center;
+	text-shadow: 0 1px 3px rgba(0,0,0,.5);
+	padding: 1rem;
+	position: relative;
+}
+
+.profile-background .change-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  color: white;
+  color: #e4e0e0;
+  padding: 0px 5px !important;
+  border: none;
+  margin: 1rem;
+}
+
+.school-detail-content {
+	text-align: left;
+	margin-top: 50px;
+}
+
+.add-profile-photo {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-radius: 50%;
+    background-color: rgb(218, 218, 218);
+    width: 11.6rem;
+    height: 11.6rem;
+    background-image: url(https://teach-static.classdojo.com/36e5601dbcb095383dec6c18a40401b4.png);
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+.profile-icon {
+    position: relative; 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: 50% 50%; 
+    border-radius: 50%; 
+    background-color: rgb(204, 236, 205); 
+    width: 3rem; height: 3rem; 
+    background-image: url(https://teach-static.classdojo.com/e72625cc16fa8fd41db88b1fc66beed8.png);
+}
+
+.add-photo-section {
+	display: inline-block;
+	text-align: center;
+	max-width: 8rem;
+	padding-top: 39px;
+	color: black;
+}
+
+.main_navigation {
+    background-color: white;
+}
+
+.main_navigation .your-class-back-btn {
+    background-color: white;
+    border: white;
+    color: black;
+    font-size: 14px;
+    padding: 0px;
+}
+
+.custom_menu li {
+    font-size: 14px;
+    cursor: pointer;
+    margin: -2px;
+}
+
+.custom_menu li.active > a {
+    color: rgb(0, 174, 239) !important;
+    /*box-shadow: rgb(0, 174, 239) 0px -2px 0px 0px inset;*/
+    background-color: transparent !important;
+    border-bottom: 2px solid rgb(0, 174, 239);
+}
+
+.selectable-btns {
+	text-align: center;
+	padding: 2rem;
+}
+
+.btn-group .btn-active {
+	background-color: rgb(0, 174, 239) !important;
+	border-color: rgb(0, 174, 239) !important;
+	color: #fff !important;
+}
+
+.class-view-list {
+  margin: 2rem 0rem;
+}
+
+/*Class list block - START */
+.class-block {
+	vertical-align: top;
+	display: inline-block;
+	margin: 1rem;
+}
+
+.class-block a {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.class-image-content {
+	position: relative;
+	background-color: white;
+	border-radius: 6px;
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 3px 0px;
+	padding: 2rem;
+	width: 18rem;
+	min-height: 22rem;
+}
+
+.class-image-content img {
+	display: block;
+	margin: 0 auto;
+	width: 9.4rem;
+	height: 9.4rem;
+	border-radius: 50%;
+}
+
+.class-image-content #class-name {
+	font-size: 1.6rem;
+	font-weight: 600;
+	margin-top: 2rem;
+	color: rgb(54, 54, 54);
+	text-align: center;
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.class-image-content #no-of-students {
+	font-size: 1.4rem;
+	color: rgb(140, 140, 140);
+	text-align: center;
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.class-settings {
+	position: relative;
+	 top: 0px;
+	 right: 0px;
+	 float: right;
+	 z-index: 999;
+}
+
+.class-settings .dropdown-toggle {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.class-settings .dropdown-toggle .class-settings-icon {
+	color: rgb(140, 140, 140);
+	cursor: pointer;
+	/*padding: 1.5rem 9.1rem 0.5rem 0.5rem; */
+	opacity: 0.6;
+	padding: 1rem;
+}
+
+.class-image-content > img {
+	display: block;
+	margin: 2rem auto;
+}
+
+.get-started-text {
+	font-size: 15px;
+}
+/*Class list block - END*/
+
+
+/*modal to display at center - START*/
+.vertical-alignment-helper {
+    display:table;
+    height: 100%;
+    width: 100%;
+}
+.vertical-align-center {
+    /* To center vertically */
+    display: table-cell;
+    vertical-align: middle;
+}
+.modal-content {
+    /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+    width:inherit;
+    height:inherit;
+    /* To center horizontally */
+    margin: 0 auto;
+}
+/*Modal to be display at center - END*/
+
+/*Select card block - START*/
+.creation-content,
+.points-content {
+	vertical-align: top;
+    display: inline-block;
+    margin: 1rem 0.5rem;
+}
+
+.creation-content > a {
+  background-color: white; 
+  border-radius: 5px; 
+  display: inline-block; 
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 3px 0px; 
+  user-select: none; 
+  cursor: pointer; 
+  text-align: center; 
+  position: relative; 
+  height: 9rem; 
+  width: 18rem; 
+  margin: 2rem 2rem 0rem 0rem;
+}
+
+.creation-content > a > img {
+  position: absolute; 
+  height: 7rem; 
+  top: 0rem; 
+  left: 0px; 
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+.creation-content > a #staff-name {
+    position: absolute;
+    width: 9.5rem;
+    height: 100%;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    right: 0px;
+    color: black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0rem 0.5rem;
+}
+
+.creation-content > a .selection_outdoor_layer {
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  text-align: right;
+}
+
+.creation-content > a .selection_inner_layer {
+  display: inline-block;
+  border: 3px solid white;
+  border-radius: 20rem;
+  color: white;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 3px 0px;
+  font-weight: 600;
+  font-size: 2rem;
+  background-color: rgb(218, 218, 218);
+}
+
+.creation-content > a .selection_inner_layer>img {
+    display: block;
+    height: 26px;
+    width: 26px;
+}
+
+.selected {
+  background-color: rgb(0, 174, 239);
+  border-radius: 2rem;
+}
+/*Select card block - END*/
+
+/*Points card block - START*/
+.points-content > a {
+    background-color: white; 
+    border-radius: 5px; 
+    display: inline-block; 
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 3px 0px; 
+    user-select: none; 
+    cursor: pointer; 
+    text-align: center; 
+    position: relative; 
+    height: 8rem; 
+    width: 16rem; 
+    margin: 1rem 1.5rem;
+}
+
+.points-content > a > img {
+    position: absolute; 
+    height: 5rem; 
+    top: 0.5rem; 
+    left: 0px; 
+    margin: 1rem;
+}
+
+.points-content > a #name-content {
+    position: absolute; 
+    width: 7.5rem; 
+    height: 6rem; 
+    top: 0px; 
+    right: 0px; 
+    margin: 2rem 0.5rem 2rem 2rem; 
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: black;
+}
+
+.select-outer-layer {
+    position: absolute; 
+    top: -2rem; 
+    right: -2rem; 
+    padding: 0px; 
+    margin: 0px; 
+    border: 0px; 
+    text-align: right;
+}
+
+.select-inner-layer {
+    display: inline-block; 
+    border: 3px solid white; 
+    border-radius: 20rem; 
+    color: white; 
+    text-align: center; 
+    padding: 0.5rem; 
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 3px 0px; 
+    font-weight: 600; 
+    min-width: 4rem; 
+    font-size: 2rem; 
+    background-color: rgb(218, 218, 218);
+}
+
+.select-inner-layer > img {
+    display: block;
+    height: 24px;
+    width: 23px;
+}
+
+.add-image > img {
+  height: 5rem;
+  margin-top: 1.5rem;
+  vertical-align: middle;
+}
+
+.setPoints {
+  background-color: rgb(147, 213, 83);
+}
+/*Points card block - END*/
+
+/*Group card block - START*/
+.group-points-content > a {
+  background-color: white;
+  border-radius: 5px;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 3px 0px;
+  user-select: none;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  height: 14rem;
+  width: 22rem;
+  margin: 2rem;
+  color: black;
+}
+
+.group-image-content {
+  text-align: center;
+}
+
+.group-image-1 {
+  position: absolute; 
+  width: 100%; 
+  text-align: center; 
+  top: 20px; 
+  margin-left: 15px;
+}
+
+.group-image-2 {
+  position: absolute; 
+  width: 100%; 
+  text-align: center; 
+  top: 20px; 
+  margin-left: -15px; 
+  padding-top: 2px;
+}
+
+.group-image-background {
+  height: 6rem; 
+  width: 5rem; 
+  display: inline-block; 
+  position: relative; 
+  margin: 0px 5px;
+}
+
+.group-image-outer-layer {
+  
+  background-repeat: no-repeat; 
+  background-size: contain; 
+  background-position: center center; 
+  min-height: 100%; 
+  min-width: 100%;
+}
+
+.group-image-background > img {
+  opacity: 0; 
+  position: absolute; 
+  width: 100%; 
+  height: 100%; 
+  top: 0px; 
+  left: 0px;
+}
+
+.group_title {
+  position: absolute;
+  height: 4rem;
+  top: 67px;
+  left: 0px;
+  right: 0px;
+  margin: 3rem 0.5rem 2rem 2rem;
+}
+
+/*Group card block - END*/
+
+.attendance-content:hover {
+  background-color: #ddd;
+}
+
+.attendance-block {
+  width: 10rem; 
+  display: inline-block; 
+  margin: 1rem;
+}
+
+.attendance-content {
+  border-radius: 5px; 
+  cursor: pointer;
+}
+
+.attendance-content-header {
+  text-align: center; 
+  color: white !important; 
+  font-size: 3rem;
+}
+
+.attendance-content-header.active {
+  background-color: rgb(122, 191, 11);
+}
+
+.attendance-content-body {
+  height: 14rem; 
+  text-align: center;
+}
