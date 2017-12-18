@@ -34,7 +34,7 @@
 		        <div class="panel-footer clearfix get-invite-panel-footer">
 			        <div class="pull-right">
 			        		<router-link to="/addnewstudent"><a href="#" class="btn btn-link">Back</a></router-link>
-			            <router-link to="/doneinvites"><button type="submit" class="btn btn-primary">Get invites</button></router-link>
+			            <router-link to="/doneinvites"><button type="submit" class="btn btn-primary default-btn">Get invites</button></router-link>
 			        </div>
 				    </div>
 			    </div>

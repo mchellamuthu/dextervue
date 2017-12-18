@@ -4,19 +4,18 @@
   <profilesection></profilesection>
 
   <!-- Class menu -->
-  <classmenu selectedMenu="Group" :classMenuBtns="classMenuBtns"></classmenu>
+  <classmenu selectedMenu="Classes" :classMenuBtns="instituteMenuBtns"></classmenu>
 
   <!-- class-view -->
    <div class="container">
-    <!-- <div class="row selectable-btns">
+    <div class="row selectable-btns">
       <div class="btn-group" role="group" aria-label="...">
-        <router-link to="/"><button type="button" class="btn btn-default">Class</button></router-link>
-        <router-link to="/groupclass"><button type="button" class="btn btn-default btn-active">Group</button></router-link>
+        <router-link to="/" class="btn btn-default">Class</router-link>
+        <router-link to="/groupclass" class="btn btn-default btn-active">Group</router-link>
       </div>
-    </div> -->
+    </div>
 		<div class="row class-view-list">
 			<card v-for="classGroup in classGroupLists" :key="classGroup.id" :title="classGroup.className" :avatar="classGroup.avatar" @click="viewDetail"></card>
-			
 			<card data-target="#addNewGroupClassModal" data-toggle="modal" title="Add group" avatar="/images/class_images/addclass.png" ></card>
 		</div>
 	</div>
@@ -40,12 +39,12 @@
           	</div>
           	<div class="create-group-class-list">
           		<!-- <selectcard v-for="(classroom, index) in classLists" :key="classroom.id" :name="classroom.className" :avatar="classroom.avatar" @click="selectClass(classroom.className, index)"></selectcard> -->
-          		<div class="creation-content" v-for="(classroom, index) in classLists" :key="classroom.id" @click="selectClass(classroom.className, index)">
+          		<div class="points-content" v-for="(classroom, index) in classLists" :key="classroom.id" @click="selectClass(classroom.className, index)">
 						    <a>
 						      <img :src="classroom.avatar">
-						      <div id="staff-name"><span>{{classroom.className}}</span> </div>
+						      <div id="name-content"><span>{{classroom.className}}</span> </div>
 						      <div class="selection_outdoor_layer">
-						         <div class="selection_inner_layer"><img :class="{ selected: classroom.clicked }" src="https://teach-static.classdojo.com/61349f8482ecfd35884ab4a8781fe218.png"></div>
+						         <div class="selection_inner_layer"><img :class="{ selectedContent: classroom.clicked }" src="https://teach-static.classdojo.com/61349f8482ecfd35884ab4a8781fe218.png"></div>
 						      </div>
 						    </a>
 						  </div>
@@ -54,7 +53,7 @@
           </div>
           <div class="modal-footer">
             <a href="#" class="btn btn-link" data-dismiss="modal">Cancel</a>
-            <button type="button" class="btn btn-primary" data-dismiss="modal" :disabled="showButton" @click="createGroup">Create group</button>
+            <button type="button" class="btn btn-primary default-btn" data-dismiss="modal" :disabled="showButton" @click="createGroup">Create group</button>
           </div>
         </div>
       </div>
@@ -80,16 +79,16 @@
           </div>
           <div class="modal-body view-group-class-modal-body">
           	<div class="view-group-class-list">
-          		<div class="creation-content" v-for="(classroom, index) in classLists" :key="classroom.id">
+          		<div class="points-content" v-for="(classroom, index) in classLists" :key="classroom.id">
 						    <a>
 						      <img :src="classroom.avatar">
-						      <div id="staff-name"><span>{{classroom.className}}</span> </div>
+						      <div id="name-content"><span>{{classroom.className}}</span> </div>
 						    </a>
 						  </div>
           	</div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary btn-lg btn-block" id="award-group-btn">Award group</button>
+            <button type="button" class="btn btn-primary default-btn btn-lg btn-block" id="award-group-btn">Award group</button>
           </div>
         </div>
       </div>
@@ -114,12 +113,12 @@
 							</form>
           	</div>
           	<div class="edit-group-class-list">
-          		<div class="creation-content" v-for="(classroom, index) in classLists" :key="classroom.id" @click="selectClass(classroom.className, index)">
+          		<div class="points-content" v-for="(classroom, index) in classLists" :key="classroom.id" @click="selectClass(classroom.className, index)">
 						    <a>
 						      <img :src="classroom.avatar">
-						      <div id="staff-name"><span>{{classroom.className}}</span> </div>
+						      <div id="name-content"><span>{{classroom.className}}</span> </div>
 						      <div class="selection_outdoor_layer">
-						         <div class="selection_inner_layer"><img :class="{ selected: classroom.clicked }" src="https://teach-static.classdojo.com/61349f8482ecfd35884ab4a8781fe218.png"></div>
+						         <div class="selection_inner_layer"><img :class="{ selectedContent: classroom.clicked }" src="https://teach-static.classdojo.com/61349f8482ecfd35884ab4a8781fe218.png"></div>
 						      </div>
 						    </a>
 						  </div>
@@ -131,7 +130,7 @@
           	</div>
           	<div class="pull-right">
           		<a href="#" class="btn btn-link" data-dismiss="modal">Cancel</a>
-            	<button type="button" class="btn btn-primary" data-dismiss="modal" :disabled="showSaveGroupButton" @click="saveGroup">Save</button>
+            	<button type="button" class="btn btn-primary default-btn" data-dismiss="modal" :disabled="showSaveGroupButton" @click="saveGroup">Save</button>
           	</div>
             
           </div>
@@ -155,6 +154,11 @@ export default {
 			inputValue: '',
 			groupName: '',
 			groupNameInputValue: '',
+      instituteMenuBtns: [
+        { name: 'Classes', icon: '', link: '/' },
+        { name: 'Staffs', icon: '', link: '/staffview' },
+        { name: 'Stories', icon: '', link: '/storyview' }
+       ],
       classMenuBtns: [
         { name: 'Class', icon: '', link: '/' },
         { name: 'Group', icon: '', link: '/groupclass' }

@@ -34,7 +34,7 @@ Route::get('/class',function(Faker $faker){
     
     for ($i=0; $i < 10; $i++) {
         $classVar[] =[
-            'íd'=>$faker->uuid,
+            'id'=>$faker->uuid,
             'className'=>$faker->company,
             'email'=>$faker->safeEmail,
             'studentCount'=> '4 Students',
@@ -89,13 +89,18 @@ Route::get('/staffgroup',function(Faker $faker){
 Route::get('/students',function(Faker $faker){
     $studentVar = array();
     $studentImages[] = glob('images/student_images/cute*');
-    for ($i=1; $i <= 10; $i++) {
+    for ($i=1; $i <= 5; $i++) {
         $studentVar[] =[
             'id'=>$faker->uuid,
             'studentName'=>$faker->name,
+            'studentFirstName' => $faker->firstname,
+            'studentLastName' => $faker->lastname,
             'studentPoint'=> 0,
             'avatar' => $studentImages[0][$i],
-            'pointsAwarded' => false
+            'pointsAwarded' => false,
+            'status' => 'present',
+            'statusValue' => 'images/student_images/present_image.png',
+            'selected' => false
         ];
     }
     return response()->json(['status'=>'OK','data'=>$studentVar]);
@@ -107,7 +112,7 @@ Route::get('/studentgroups',function(Faker $faker){
     $random_keys = array_rand($studentGroupImages, 4);
 
     for($j=1; $j <= 4; $j++) {
-      $studentRandomAvatars = [
+      $studentRandomAvatars[] = [
         'avatar1' => $studentGroupImages[$random_keys[0]],
         'avatar2' => $studentGroupImages[$random_keys[1]],
         'avatar3' => $studentGroupImages[$random_keys[2]],
@@ -121,10 +126,25 @@ Route::get('/studentgroups',function(Faker $faker){
         'studentGroupName'=>$faker->name,
         'studentGroupPoint'=> 0,
         'avatar' => $studentRandomAvatars,
-        'pointsAwarded' => false
+        'pointsAwarded' => false,
+        'selected' => false
       ];
     }
     return response()->json(['status'=>'OK','data'=>$studentGroupVar]);
+});
+
+Route::get('/skills',function(Faker $faker){
+    $skillvar = array();
+    $skillImages[] = glob('images/skill_icons/skill*');
+    for ($i=1; $i <= 5; $i++) {
+        $skillvar[] =[
+            'id'=>$faker->uuid,
+            'skillName'=>$faker->word,
+            'skillPoint'=> 1,
+            'avatar' => $skillImages[0][$i]
+        ];
+    }
+    return response()->json(['status'=>'OK','data'=>$skillvar]);
 });
 
 Route::get('/classimages', function() {
@@ -138,20 +158,26 @@ Route::get('/classimages', function() {
     return response()->json(['status'=>'OK','data'=>$classImages]);
 });
 
-/*,
-      {
-        'menuName': 'Connect parents',
-        'menuUrl': ''
-      },
-      {
-        'menuName': 'Connect students',
-        'menuUrl': ''
-      },
-      {
-        'menuName': 'Add co-teachers',
-        'menuUrl': ''
-      },
-      {
-        'menuName': 'Archive class',
-        'menuUrl': ''
-      }*/
+Route::get('/studentImages', function() {
+    $studentImages = array();
+    $listOfImages[] = glob('images/student_images/cute*');
+    for ($i = 0; $i < 20; $i++) {
+        $studentImages[] = [
+            'avatar' => $listOfImages[0][$i]
+        ];
+    }
+    return response()->json(['status'=>'OK','data'=>$studentImages]);
+});
+
+Route::get('/skillImages', function() {
+    $skillImages = array();
+    $listOfSkillImages[] = glob('images/skill_icons/skill*');
+    for ($i = 1; $i < 50; $i++) {
+        $skillImages[] = [
+            'avatar' => $listOfSkillImages[0][$i]
+        ];
+    }
+    return response()->json(['status'=>'OK','data'=>$skillImages]);
+});
+
+

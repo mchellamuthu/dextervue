@@ -19,7 +19,6 @@ body.addnewclass {
 
 a, a:hover, a:focus {
 	color: rgb(0, 174, 239);
-	font-weight: 600;
 	text-decoration: none;
     cursor: pointer;
 }
@@ -72,8 +71,6 @@ a, a:hover, a:focus {
     outline: none;
     border: 1px solid rgb(0, 174, 239);
     font-family: ProximaNova, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    padding: 0.9rem 3.2rem;
-    border-radius: 200px;
     box-shadow: none;
     text-align: center;
     color: white;
@@ -90,8 +87,6 @@ a, a:hover, a:focus {
     display: inline-block;
     outline: none;
     font-family: ProximaNova, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    padding: 0.9rem 3.2rem;
-    border-radius: 200px;
     box-shadow: none;
     text-align: center;
     color: white !important;
@@ -103,6 +98,12 @@ a, a:hover, a:focus {
 	border-color: rgb(26, 182, 241) !important;
 	outline: none !important;
 	color: white !important;
+}
+
+.default-btn,
+.default-btn:hover {
+    padding: 0.9rem 3.2rem;
+    border-radius: 200px;
 }
 
 .btn-group .btn {
@@ -140,4 +141,9 @@ fieldset[disabled] .btn-primary.focus {
     background-color: #dedada !important;
     border-color: #dedada !important;
     cursor: not-allowed;
+}
+
+.close {
+    font-size: 34px !important;
+    outline: none !important;
 }

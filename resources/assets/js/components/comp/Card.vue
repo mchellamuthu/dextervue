@@ -24,13 +24,14 @@
 	        </ul>
 	      </span>
 	    </div>
-	    <a v-on:click="viewDetail(title)">
+			<!-- <router-link :to="'/studentview/'+classid">	    --> 
+		<a v-on:click="viewDetail(title, classid)">
 	      <div class="class-image-content">
 	         <img :src="avatar">
 	         <div id="class-name">{{title}}</div>
 	         <div id="no-of-students">{{submenu}}</div>
 	      </div>
-	    </a>
+	      </a>
 	  </div>
 </template>
 
@@ -38,10 +39,10 @@
 <script>
 
 export default {
-	props:['title','submenu','menus','avatar','path', 'icon'],
+	props:['title','submenu','menus','avatar','path', 'icon','classid'],
 	methods: {
-		viewDetail(title) {
-			this.$emit('click', this.title);
+		viewDetail(title, classId) {
+			this.$emit('click', title, classId);
 		}
 	}
 }

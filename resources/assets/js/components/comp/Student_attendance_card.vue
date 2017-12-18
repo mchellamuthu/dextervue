@@ -1,20 +1,19 @@
 <template>
 	<div class="points-content">
-    <a v-on:click="addPoints(name)">
+    <a v-on:click="takeAttendance(status)">
       <img :src="avatar">
       <div id="name-content"><span>{{studentFirstName}}</span></div>
-      <div class="select-outer-layer">
-         <div class="select-inner-layer" :class="{ setPoints: givenPoints }">{{value}}</div>
+      <div class="attendance_outdoor_layer">
+         <div class="attendance_inner_layer"><img :src="statusValue"></div>
       </div>
    </a>
   </div>
 </template>
 
-
 <script>
 
 export default {
-	props:['name', 'avatar','value', 'givenPoints'],
+	props:['name', 'avatar','imageValue', 'statusValue', 'index', 'status' ],
   data () {
     return {
       studentFirstName: ''
@@ -24,11 +23,11 @@ export default {
     this.getStudentFirstName();
   },
   methods: {
-    addPoints(name) {
-      this.$emit('click', this.name);
-    },
     getStudentFirstName() {
       this.studentFirstName = this.name.split(' ')[0];
+    },
+    takeAttendance (status) {
+    	this.$emit('click', status, this.index);
     }
   }
 

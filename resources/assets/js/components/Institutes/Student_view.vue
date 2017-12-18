@@ -25,9 +25,9 @@
 	      </div>
 	   </a>
 	  </div>
-		<pointcard v-for="(student, index) in studentLists" :key="student.id" :name="student.studentName" :avatar="student.avatar" :value="student.studentPoint" :givenPoints="student.pointsAwarded"></pointcard>
-		<div class="points-content">
-    	<a>
+		<pointcard v-for="(student, index) in studentLists" :key="student.id" :name="student.studentName" :avatar="student.avatar" :value="student.studentPoint" :givenPoints="student.pointsAwarded" @click="addPoints"></pointcard>
+		<div class="points-content add-new-content">
+    	<a href="#addNewStudentModal" data-toggle="modal">
     		<div class="add-image">
     			<img src="images/student_images/add_button.png">
     		</div>
@@ -35,25 +35,41 @@
     </div>
   </div>
 
+  <attendancebottom></attendancebottom>
+
+  <addstudentpointsmodal modalId="addStudentPointsModal" :skills="skills" :studentName="studentName"></addstudentpointsmodal>
+
+  <institutemodal modalId="institutemodal" :studentLists="studentLists"></institutemodal>
+
+  <!-- <div id="institutemodal" class="modal fade" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+    <institutemodal modalId="institutemodal" :studentLists="studentLists"></institutemodal>
+  </div> -->
+
+  
+
 </div>
 </template>
 
 <script>
+import filestack from 'filestack-js'
   export default{
     data() {
       return {
        activeBtn: this.selectedMenu,
        studentLists: '',
        wholeClassPointsAwarded: false,
+       studentName: '',
+       skills: '',
        classMenu: [
         { name: 'Classroom', icon: 'glyphicon glyphicon-home', link: '/studentview' },
-        { name: 'Stories', icon: 'glyphicon glyphicon-picture', link: '/studentgroupview' },
-        { name: 'Messages', icon: 'glyphicon glyphicon-comment', link: '/viewreport' }
+        { name: 'Stories', icon: 'glyphicon glyphicon-picture', link: '/stories' },
+        { name: 'Messages', icon: 'glyphicon glyphicon-comment', link: '/message' }
        ]
       }
     },
     mounted() {
 			this.getStudentList();
+			this.getSkills();
 		},
     methods: {
       getStudentList () {
@@ -69,13 +85,25 @@
 			  .catch(function (error) {
 			    console.log(error);
 			  });
+			},
+			addPoints(name) {
+	    	$('#addStudentPointsModal').modal('show');
+	    	this.studentName = name;
+	    },
+	    getSkills () {
+				axios.get('/api/skills')
+			  .then((response) => {
+			  	this.skills = response.data.data;
+			  })
+			  .catch(function (error) {
+			    console.log(error);
+			  });
 			}
     }
   }
 </script>
 
 <style scoped>
-.student-view-list {
-	margin: 2rem;
-}
+
+
 </style>

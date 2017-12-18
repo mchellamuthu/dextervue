@@ -71,7 +71,7 @@
 		        <div class="panel-footer clearfix add-student-panel-footer">
 			        <div class="pull-right">
 			        		<router-link to="/addnewclass"><a href="#" class="btn btn-link">Cancel</a></router-link>
-			            <router-link to="/getinvites"><button type="submit" class="btn btn-primary" :disabled="showButton">Done adding student</button></router-link>
+			            <router-link to="/getinvites"><button type="submit" class="btn btn-primary default-btn" :disabled="showButton">Done adding student</button></router-link>
 			        </div>
 				    </div>
 			    </div>
@@ -123,7 +123,7 @@
           </div>
           <div class="modal-footer">
             <a href="#" class="btn btn-link" data-dismiss="modal">Back</a>
-            <button type="button" class="btn btn-primary" data-dismiss="modal" @click="continueToImport">Continue</button>
+            <button type="button" class="btn btn-primary default-btn" data-dismiss="modal" @click="continueToImport">Continue</button>
           </div>
         </div>
       </div>
@@ -281,7 +281,7 @@ export default {
 </script>
 
 <style scoped lang="css">
-.add-new-student-panel {
+/*.add-new-student-panel {
 	margin: 2rem 0rem;
 }
 
@@ -355,7 +355,7 @@ export default {
   height: 30rem;
   overflow-y: auto;
   overflow-x: hidden;
-}
+}*/
 
 
 	/*check while making as a single css file*/

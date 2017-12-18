@@ -69,7 +69,7 @@
 		        <div class="panel-footer clearfix">
 			        <div class="pull-right">
 			        		<router-link to="/"><a href="#" class="btn btn-link">Cancel</a></router-link>
-			            <router-link to="/addnewstudent"><button type="submit" class="btn btn-primary" :disabled="showButton">Add class</button></router-link>
+			            <router-link to="/addnewstudent"><button type="submit" class="btn btn-primary default-btn" :disabled="showButton">Add class</button></router-link>
 			        </div>
 				    </div>
 			    </div>
@@ -120,60 +120,6 @@ export default {
 </script>
 
 <style scoped>
-.add-new-class-panel {
-	margin: 2rem 0rem;
-}
-
-.add-new-class-panel-header {
-	padding: 2rem;
-}
-
-.class-icon-selection-dropdown {
-	text-align: center;
-	padding: 5rem 5rem 2rem;
-}
-
-.class-icon-selection-dropdown .btn {
-	position: relative !important;
-}
-
-.class-icon-selection-dropdown .btn b {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  color: #878282;
-}
-
-#dropdown-image-add-class {
-  max-height: 30rem;
-  max-width: 45rem;
-  border-radius: 5px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  z-index: 120;
-}
-
-#dropdown-image-add-class .list-inline {
-	padding: 2rem 1rem;
-}
-
-#dropdown-image-add-class .list-inline > li {
-	text-align: center;
-	width: 8rem;
-	padding: 5px;
-}
-
-#dropdown-image-add-class .list-inline > li:hover {
-	cursor: pointer;
-    display: inline-block;
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-    background-color: rgb(245, 245, 245);
-}
-
-.input-content {
-	padding: 3rem 5rem;
-}
 
 /*check while making as a single css file*/
 .timeline {
